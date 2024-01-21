@@ -25,7 +25,7 @@ export default async function Home() {
         </div>
       </SignedIn>
       <SignedOut>
-        <div className="fixed right-2 top-2 rounded-full bg-white/10 px-10 py-3 font-semibold no-underline transition hover:bg-white/20 hover:ring-1 hover:ring-slate-300">
+        <div className="fixed right-2 top-2 rounded-full bg-white/10  px-2 py-1 font-semibold no-underline transition hover:bg-white/15 hover:ring-1 hover:ring-slate-300">
           <SignInButton mode="modal">Sign in with Clerk</SignInButton>
         </div>
       </SignedOut>
@@ -59,7 +59,7 @@ export default async function Home() {
             </div>
           </Link>
         </div>
-        <div className="flex flex-col items-center gap-2">
+        {/* <div className="flex flex-col items-center gap-2">
           <p className="text-2xl text-white">
             {hello ? hello.greeting : "Loading tRPC query..."}
           </p>
@@ -75,7 +75,7 @@ export default async function Home() {
               {session ? "Sign out" : "Sign in"}
             </Link>
           </div>
-        </div>
+        </div> */}
 
         <CrudShowcase />
       </div>

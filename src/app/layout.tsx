@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <ClerkProvider
       appearance={{
-        baseTheme: dark,
+        baseTheme: shadesOfPurple,
       }}
     >
       <html lang="en">
