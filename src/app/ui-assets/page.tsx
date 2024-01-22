@@ -10,7 +10,7 @@ import {
   ButtonBlueS,
   ButtonRedS,
   ButtonGoldS,
-} from "~/components/ui/buttons";
+} from "~/twstyles/buttons";
 
 const uiassets = () => {
   return (
