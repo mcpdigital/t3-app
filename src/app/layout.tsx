@@ -41,7 +41,7 @@ export default function RootLayout({
             </div>
           </SignedIn>
           <SignedOut>
-            <div className="invisible fixed right-2 top-2 rounded-full bg-white/10 px-2.5  py-1.5 font-semibold text-slate-100 no-underline  transition hover:bg-white/15 hover:ring-1 hover:ring-slate-300 md:visible">
+            <div className="fixed right-2 top-2 rounded-full bg-white/10 px-2.5  py-1.5 font-semibold text-slate-100 no-underline  transition hover:bg-white/15 hover:ring-1 hover:ring-slate-300 ">
               <SignInButton mode="modal">Sign in with Clerk</SignInButton>
             </div>
           </SignedOut>
