@@ -33,10 +33,12 @@ export default function RootLayout({
         baseTheme: shadesOfPurple,
       }}
     >
-      <html lang="en">
-        <body className={`font-sans ${inter.variable}`}>
+      <html className="dark" lang="en">
+        <body
+          className={`bg:slate-200 font-sans text-black dark:bg-slate-800 dark:text-white ${inter.variable}`}
+        >
           <SignedIn>
-            <div className="fixed right-2 top-2 rounded-full bg-white/20 p-0.5 text-slate-200 hover:ring-1 hover:ring-white/70">
+            <div className="fixed right-2 top-2 rounded-full bg-slate-200 bg-white/20 p-0.5 text-slate-200 hover:ring-1 hover:ring-white/70 ">
               <UserButton afterSignOutUrl="/" />
             </div>
           </SignedIn>
