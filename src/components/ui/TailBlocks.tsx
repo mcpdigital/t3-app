@@ -1,4 +1,5 @@
 import React from "react";
+import { ButtonTailblocksBlue } from "~/twstyles/buttons";
 
 const TailBlocks = () => {
   return (
@@ -7,26 +8,27 @@ const TailBlocks = () => {
         <div className="container mx-auto px-5 py-24">
           <div className="mb-20 flex w-full flex-col text-center">
             <h2 className="title-font mb-1 text-xs font-medium tracking-widest text-indigo-400">
-              ROOF PARTY POLAROID
+              CLERK IMPLEMENTATION WITH NEXT 14.0.4 T3 STACK
             </h2>
             <h1 className="title-font mb-4 text-2xl font-medium text-white sm:text-3xl">
-              Master Cleanse Reliac Heirloom
+              Page for Logged In Users
             </h1>
             <p className="mx-auto text-base leading-relaxed lg:w-2/3">
-              Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-              gentrify, subway tile poke farm-to-table. Franzen you probably
-              have not heard of them man bun deep jianbing selfies heirloom
-              prism food truck ugh squid celiac humblebrag.
+              This is a protected page using SingedIn and SignedOut status.
+              Whenever the user is singed out, an informational page will
+              appear, while for the signed in user this page will appear.
             </p>
           </div>
           <div className="flex flex-wrap">
             <div className="border-l-2 border-gray-800 px-8 py-6 md:w-full lg:w-1/2 xl:w-1/4">
               <h2 className="title-font mb-2 text-lg font-medium text-white sm:text-xl">
-                Shooting Stars
+                Clerk Implementation
               </h2>
               <p className="mb-4 text-base leading-relaxed">
-                Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-                hexagon disrupt edison bulbche.
+                The implementation of Clerk was smooth, with no issues. All the
+                state functions and button types have been used and tested. This
+                protected page is an example of the flexibility available to
+                protect routes.
               </p>
               <a className="inline-flex items-center text-indigo-400">
                 Learn More
@@ -45,11 +47,13 @@ const TailBlocks = () => {
             </div>
             <div className="border-l-2 border-gray-800 px-8 py-6 md:w-full lg:w-1/2 xl:w-1/4">
               <h2 className="title-font mb-2 text-lg font-medium text-white sm:text-xl">
-                The Catalyzer
+                UI Components
               </h2>
               <p className="mb-4 text-base leading-relaxed">
-                Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-                hexagon disrupt edison bulbche.
+                This page shows a component with the text blocks or features. It
+                is import on a page after the login is completed. The use of
+                components is to facilitate the code reusability and avoid
+                confusion with too large number of JSX lines in the code.
               </p>
               <a className="inline-flex items-center text-indigo-400">
                 Learn More
@@ -68,11 +72,12 @@ const TailBlocks = () => {
             </div>
             <div className="border-l-2 border-gray-800 px-8 py-6 md:w-full lg:w-1/2 xl:w-1/4">
               <h2 className="title-font mb-2 text-lg font-medium text-white sm:text-xl">
-                Neptune
+                Custom layout.tsx
               </h2>
               <p className="mb-4 text-base leading-relaxed">
-                Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-                hexagon disrupt edison bulbche.
+                The custom layout for this page will write over the Root layout
+                a login button that redirects to this page when logged in. After
+                is logged out in it will return for the informational page.
               </p>
               <a className="inline-flex items-center text-indigo-400">
                 Learn More
@@ -91,11 +96,18 @@ const TailBlocks = () => {
             </div>
             <div className="border-l-2 border-gray-800 px-8 py-6 md:w-full lg:w-1/2 xl:w-1/4">
               <h2 className="title-font mb-2 text-lg font-medium text-white sm:text-xl">
-                Melanchole
+                The project
               </h2>
               <p className="mb-4 text-base leading-relaxed">
-                Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-                hexagon disrupt edison bulbche.
+                Since the idea is to use the T3 stack, the first thing was to
+                migrate to NextJS 14.0.4 and use the latest versions of
+                everything. For styles the tailwindcss was used and some tests
+                were done with constants having pre-defined tailwind strings to
+                be resusable. The button bellow is using one of these tailwind
+                strings.{" "}
+                <p className="mt-1 text-sm font-semibold">
+                  {ButtonTailblocksBlue}
+                </p>
               </p>
               <a className="inline-flex items-center text-indigo-400">
                 Learn More
@@ -113,9 +125,7 @@ const TailBlocks = () => {
               </a>
             </div>
           </div>
-          <button className="mx-auto mt-16 flex rounded border-0 bg-indigo-500 px-8 py-2 text-lg text-white hover:bg-indigo-600 focus:outline-none">
-            Button
-          </button>
+          <button className={ButtonTailblocksBlue}>Button</button>
         </div>
       </section>
       GitHub

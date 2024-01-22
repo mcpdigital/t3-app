@@ -1,13 +1,7 @@
 import { unstable_noStore as noStore } from "next/cache";
 
 import Link from "next/link";
-import {
-  SignOutButton,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/nextjs";
+
 import { CreatePost } from "~/app/_components/create-post";
 import { getServerAuthSession } from "~/server/auth";
 import { api } from "~/trpc/server";
@@ -19,17 +13,6 @@ export default async function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      <SignedIn>
-        <div className="fixed right-2 top-2 rounded-full bg-white/20 p-0.5 hover:ring-1 hover:ring-white/70">
-          <UserButton afterSignOutUrl="/" />
-        </div>
-      </SignedIn>
-      <SignedOut>
-        <div className="fixed right-2 top-2 rounded-full bg-white/10  px-2 py-1 font-semibold no-underline transition hover:bg-white/15 hover:ring-1 hover:ring-slate-300">
-          <SignInButton mode="modal">Sign in with Clerk</SignInButton>
-        </div>
-      </SignedOut>
-
       <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
         <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
           Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
