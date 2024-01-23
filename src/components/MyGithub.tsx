@@ -25,7 +25,7 @@ const FetchApi: React.FC = () => {
       }
     };
 
-    fetchData();
+    await fetchData();
   }, []);
 
   if (loading) {
