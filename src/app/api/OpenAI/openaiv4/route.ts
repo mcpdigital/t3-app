@@ -26,8 +26,9 @@ export async function POST(req: Request) {
     };
     const chatCompletion: OpenAI.Chat.ChatCompletion =
       await openai.chat.completions.create(params);
+
     const response = {
-      response: chatCompletion?.choices[0].message.content?.trim(),
+      response: chatCompletion?.choices?.[0]?.message.content?.trim(),
     };
     return NextResponse.json(response);
   } catch (error) {
