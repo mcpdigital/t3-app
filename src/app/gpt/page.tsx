@@ -20,7 +20,7 @@ export default function GPT() {
       });
       if (res.ok) {
         const data = await res.json();
-        setResponse(data.response);
+        setResponse((data as { response: string })?.response ?? "");
       } else {
         throw new Error("Network response was not ok.");
       }
