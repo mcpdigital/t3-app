@@ -10,7 +10,11 @@ export default function DallE() {
   const [prompt, setPrompt] = useState("");
   const [response, setResponse] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  var image_url = "";
+
+  interface ResponseData {
+    data: string; // Update the type based on the actual response data structure
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
@@ -23,8 +27,8 @@ export default function DallE() {
         body: JSON.stringify({ prompt }),
       });
       if (res.ok) {
-        const data = await res.json(); // keep using await res.json()
-        setResponse(data.data); // changed from setResponse(data.data[0].url.response)
+        const data: ResponseData = await res.json();
+        setResponse(data.data);
         console.log("RESPONSE IS:", data.data);
       } else {
         throw new Error("Network response was not ok.");
