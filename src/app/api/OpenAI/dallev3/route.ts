@@ -16,7 +16,7 @@ export async function POST(req: Request) {
       response_format: "url",
       size: "1792x1024",
     });
-    const image_url = image.data[0].url;
+    const image_url = image.url;
     console.log("IMAGE URL IS:", image_url);
     // É OBRIGATORIO RETORNAR UM RESPONSE OU NEXTRESPONSE DE UM ROUTE.TS COM POST
     return NextResponse.json({ data: image_url });
