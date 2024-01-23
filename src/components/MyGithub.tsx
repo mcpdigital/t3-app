@@ -25,7 +25,8 @@ const FetchApi: React.FC = () => {
       }
     };
 
-    await fetchData();
+    // Call fetchData and ignore the returned promise
+    fetchData().catch((error) => console.error(error));
   }, []);
 
   if (loading) {
