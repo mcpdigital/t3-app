@@ -5,7 +5,13 @@ import { GRAD_GOTHAN_TB } from "../tw_gradients";
 
 interface UserData {
   id: number;
-  // Add other properties here
+  name: string;
+  login: string;
+  avatar_url: string;
+  html_url: string;
+  public_repos: number;
+  followers: number;
+  following: number;
 }
 
 const FetchApi: React.FC = () => {
