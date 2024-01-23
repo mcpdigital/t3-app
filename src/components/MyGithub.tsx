@@ -17,7 +17,7 @@ const FetchApi: React.FC = () => {
           throw new Error("Failed to fetch data");
         }
         const data = await response.json();
-        setData(data);
+        setData(data as GHApiResponse);
       } catch (error) {
         setError("Error fetching data");
       } finally {
