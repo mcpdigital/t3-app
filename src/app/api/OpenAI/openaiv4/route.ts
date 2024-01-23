@@ -4,7 +4,7 @@
 
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
-import Tiktoken from "tiktoken"; // import the tokenizer library
+// import Tiktoken from "tiktoken"; // import the tokenizer library
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
