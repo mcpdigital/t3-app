@@ -22,9 +22,11 @@ export const postRouter = createTRPCRouter({
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       return ctx.db.post.create({
+        // create a new post
         data: {
           name: input.name,
-          createdBy: { connect: { id: ctx.session.user.id } },
+          // createdBy: { connect: { id: ctx.session.user.id } },
+          createdById: ctx.session.user.id,
         },
       });
     }),
