@@ -2,20 +2,10 @@
 import React from "react";
 import UserCard from "../components/ui/GHUserCard";
 import { GRAD_GOTHAN_TB } from "../tw_gradients";
-
-interface UserData {
-  id: number;
-  name: string;
-  login: string;
-  avatar_url: string;
-  html_url: string;
-  public_repos: number;
-  followers: number;
-  following: number;
-}
+import type { GHApiResponse } from "../types/types"; // Import ApiResponse interface from a shared types file
 
 const FetchApi: React.FC = () => {
-  const [data, setData] = React.useState<UserData | null>(null);
+  const [data, setData] = React.useState<GHApiResponse | null>(null);
   const [error, setError] = React.useState<string | null>(null);
   const [loading, setLoading] = React.useState<boolean>(true);
 
