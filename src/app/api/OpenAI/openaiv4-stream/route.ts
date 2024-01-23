@@ -14,7 +14,7 @@ export async function POST(req: Request) {
   const { prompt } = await req.json();
 
   // Set the max_tokens value to limit the consumption
-  const max_tokens = 100;
+  // const max_tokens = 100;
   // Ask OpenAI for a streaming completion given the prompt
   const response = await openai.completions.create({
     model: "gpt-3.5-turbo-instruct",

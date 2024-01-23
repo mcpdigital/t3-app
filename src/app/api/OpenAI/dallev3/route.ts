@@ -7,7 +7,7 @@ const openai = new OpenAI({
 // É OBRIGATORIO COLOCAR O NOME POST NA FUNCAO ASYNC
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
+    const body: { prompt: string } = await req.json();
     const prompt = body.prompt;
     const image = await openai.images.generate({
       model: "dall-e-3",
@@ -17,14 +17,7 @@ export async function POST(req: Request) {
       size: "1792x1024",
     });
     // Check if image, image.data and image.data[0] are not undefined before accessing image.data[0].url
-    const image_url =
-      image && image.data && image.data[0] ? image.data[0].url : undefined;
-    if (image_url) {
-      console.log("IMAGE URL IS:", image_url);
-      return NextResponse.json({ data: image_url });
-    } else {
-      throw new Error("Image URL is undefined");
-    }
+    const image_url = image?.data?.[0]?.url;
     // É OBRIGATORIO RETORNAR UM RESPONSE OU NEXTRESPONSE DE UM ROUTE.TS COM POST
     return NextResponse.json({ data: image_url });
   } catch (error) {

@@ -12,7 +12,7 @@ const openai = new OpenAI({
 
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
+    const body: { prompt: string } = await req.json();
     const prompt = body.prompt;
 
     // Set the max_tokens value to limit the consumption
